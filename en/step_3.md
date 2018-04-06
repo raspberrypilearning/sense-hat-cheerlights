@@ -11,7 +11,7 @@ Colours can be represented in different ways:
 
 1. Click the **REPL** icon to open up a Python shell
 
-1. Import the `colourzero` library by typing:
+1. Import the `colorzero` library by typing:
 
     ```python
     from colorzero import Color
