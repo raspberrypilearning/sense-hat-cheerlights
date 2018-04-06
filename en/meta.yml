@@ -1,0 +1,18 @@
+title: Sense HAT Cheerlights
+hero_image: images/banner.png
+description: Tweet a colour to light up your Sense HAT!
+theme: red # possible values: blue, green, navy, orange, red, turquoise, violet, yellow
+duration: 2 # possible values: 1, 2 or 3
+listed: false
+ingredient: false
+copyedit: false
+curriculum: programming-0, phys-comp-0
+interests:
+technologies: "sense-hat, python"
+site_areas:
+steps:
+  - title: Introduction
+  - title: What you will need
+  - title: Code and colours
+  - title: Cheerlights
+  - title: Challenges
