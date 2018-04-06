@@ -1,6 +1,6 @@
 ## Introduction
 
-Make your Sense HAT shine with pride
+Tweet a colour to light up your Sense HAT!
 
 ## Notes
 
