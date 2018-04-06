@@ -4,7 +4,7 @@
 
 1. The starter code simply prints out the tweet contents. Press the **Run** button and get someone to tweet `#cheerlights red` – and you should see the word 'red' in the output.
 
-1. Modify the `on_success` method in the `MyStreamer` class to set the Sense HAT LEDs to the tweeted colour:
+1. Modify the `on_success` method in the `CheerlightsStreamer` class to set the Sense HAT LEDs to the tweeted colour:
 
     ```python
     def on_success(self, data):
