@@ -12,8 +12,6 @@ Alternatively, you can use the [Sense HAT emulator](http://sense-emu.readthedocs
 - Mu
 - colorzero
 
-To install colorzero, type the following into a terminal window and press <kbd>Enter</kbd>.
-
 ```bash
 sudo apt install mu python3-colorzero
 ```
@@ -30,3 +28,5 @@ wget http://rpf.io/shcheerauth -O auth.py
 ```
 
 Create Twitter API keys (read-only) at [apps.twitter.com](https://apps.twitter.com/) and enter them into `auth.py`.
+
+For full instructions on setting up API keys, see the [Getting started with the Twitter API](https://projects.raspberrypi.org/en/projects/getting-started-with-the-twitter-api) project.
