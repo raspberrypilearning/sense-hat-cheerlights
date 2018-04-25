@@ -12,7 +12,7 @@
             tweet = data['text'].replace(hashtag, '')
             color_text = tweet.strip()
             color = Color(color_text)
-    	      sense.clear(color.rgb_bytes)
+    	    sense.clear(color.rgb_bytes)
     ```
 
 1. Try tweeting different colour names to test it out!
