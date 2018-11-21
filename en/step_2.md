@@ -1,32 +1,75 @@
-## What you will need
+## Code and colours
 
-### Hardware
+Colours can be represented in different ways:
 
-- Raspberry Pi
-- Sense HAT
+- Colour names like 'red'
+- RGB colour values from 0 to 255, e.g. (255, 0, 0)
+- RGB colour values from 0 to 1, e.g. (1, 0, 0)
+- Hex colour codes like #f00 or #ff0000
 
-Alternatively, you can use the [Sense HAT emulator](http://sense-emu.readthedocs.io/) on a PC.
+--- task ---
 
-### Software
+Open **Mu** from the taskbar.
 
-- Mu
-- colorzero
+--- /task ---
 
-```bash
-sudo apt install mu python3-colorzero
+--- task ---
+
+Click the **REPL** icon to open up a Python shell.
+
+--- /task ---
+
+--- task ---
+
+Import the `colorzero` library by typing:
+
+```python
+from colorzero import Color
 ```
 
-## Files
+--- /task ---
 
-Download the starter code by entering the following into a terminal window:
+--- task ---
 
-```bash
-mkdir cheerlights
-cd cheerlights
-wget http://rpf.io/shcheer -O cheerlights.py
-wget http://rpf.io/shcheerauth -O auth.py
+Create a colour object with the word 'red':
+
+```python
+c = Color('red')
 ```
 
-Create Twitter API keys (read-only) at [apps.twitter.com](https://apps.twitter.com/) and enter them into `auth.py`.
+--- /task ---
 
-For full instructions on setting up API keys, see the [Getting started with the Twitter API](https://projects.raspberrypi.org/en/projects/getting-started-with-the-twitter-api) project.
+--- task ---
+
+Inspect the different representations of the colour by typing each of these in turn:
+
+```python
+c.rgb
+c.rgb_bytes
+c.html
+```
+
+--- /task ---
+
+--- task ---
+
+You should see the colour red represented in different ways. Try the same with a different colour name.
+
+--- /task ---
+
+--- task ---
+
+The Sense HAT library expects RGB values from 0 to 255. Try setting the LEDs to different colours using:
+
+```python
+from sense_hat import SenseHat
+from colorzero import Color
+
+sense = SenseHat()
+
+color = Color('red')
+
+sense.clear(color.rgb_bytes)
+```
+
+--- /task ---

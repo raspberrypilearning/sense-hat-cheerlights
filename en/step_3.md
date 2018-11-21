@@ -1,47 +1,53 @@
-## Code and colours
+## Cheerlights
 
-Colours can be represented in different ways:
+--- task ---
 
-- Colour names like 'red'
-- RGB colour values from 0 to 255, e.g. (255, 0, 0)
-- RGB colour values from 0 to 1, e.g. (1, 0, 0)
-- Hex colour codes like #f00 or #ff0000
+Click the **Load** button and open the `cheerlights.py` file.
 
-1. Open **Mu** from the taskbar.
+--- /task ---
 
-1. Click the **REPL** icon to open up a Python shell.
+--- task ---
 
-1. Import the `colorzero` library by typing:
+The starter code simply prints out the tweet contents. Press the **Run** button and get someone to tweet `#cheerlights red` — you should see the word 'red' in the output.
 
-    ```python
-    from colorzero import Color
-    ```
+--- /task ---
 
-1. Create a colour object with the word 'red':
+--- task ---
 
-    ```python
-    c = Color('red')
-    ```
+Modify the `on_success` method in the `CheerlightsStreamer` class to set the Sense HAT LEDs to the tweeted colour:
 
-1. Inspect the different representations of the colour by typing each of these in turn:
+```python
+def on_success(self, data):
+    if 'text' in data:
+        tweet = data['text'].replace(hashtag, '')
+        color_text = tweet.strip()
+        color = Color(color_text)
+        sense.clear(color.rgb_bytes)
+```
 
-    ```python
-    c.rgb
-    c.rgb_bytes
-    c.html
-    ```
+--- /task ---
 
-1. You should see the color red represented in different ways. Try the same with a different colour name.
+--- task ---
 
-1. The Sense HAT library expects RGB values from 0 to 255. Try setting the LEDs to different colours using:
+Try tweeting different colour names to test it out!
 
-    ```python
-    from sense_hat import SenseHat
-    from colorzero import Color
+--- /task ---
 
-    sense = SenseHat()
+--- task ---
 
-    color = Color('red')
+You might notice that some colour names you try don't work — and they can cause the program to crash. Add an exception handler to deal with this, and to let you know when there's an error:
 
-    sense.clear(color.rgb_bytes)
-    ```
+```python
+def on_success(self, data):
+    if 'text' in data:
+        tweet = data['text']
+        tweet = tweet.replace(hashtag, '')
+        color_text = tweet.strip()
+        try:
+            color = Color(color_text)
+            sense.clear(color.rgb_bytes)
+        except ValueError:
+            print('Failed: {}'.format(color_text))
+```
+
+--- /task ---
