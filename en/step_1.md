@@ -13,11 +13,15 @@ title: What you will need
 
 If you have a Raspberry Pi but no Sense HAT, you can use the Sense HAT emulator in Raspbian. Simply change the import line at the top of your code from:
 
-`from sense_hat import SenseHat`
+```python
+from sense_hat import SenseHat
+```
 
 to:
 
-`from sense_emu import SenseHat`
+```python
+from sense_emu import SenseHat
+```
 
 You'll need to install Mu and colorzero, and download the starter code. Open a Terminal window and enter the following commands:
 

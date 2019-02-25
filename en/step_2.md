@@ -9,13 +9,7 @@ Colours can be represented in different ways:
 
 --- task ---
 
-Open **Mu** from the taskbar.
-
---- /task ---
-
---- task ---
-
-Click the **REPL** icon to open up a Python shell.
+Open **Mu** from the main menu. Click the **REPL** icon to open up a Python shell.
 
 --- /task ---
 
