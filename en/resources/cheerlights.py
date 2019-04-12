@@ -1,5 +1,5 @@
 from twython import TwythonStreamer
-from sense_emu import SenseHat
+from sense_hat import SenseHat
 from colorzero import Color
 from auth import (
     consumer_key,
