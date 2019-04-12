@@ -15,8 +15,14 @@ hashtag = '#cheerlights'
 class CheerlightsStreamer(TwythonStreamer):
     def on_success(self, data):
         if 'text' in data:
-            tweet = data['text'].replace(hashtag, '')
-            print(tweet)
+            tweet = data['text']
+            tweet = tweet.replace(hashtag, '')
+            color_text = tweet.strip()
+            try:
+                color = Color(color_text)
+                sense.clear(color.rgb_bytes)
+            except ValueError:
+                print('Failed: {}'.format(color_text))
 
 stream = CheerlightsStreamer(
     consumer_key,
